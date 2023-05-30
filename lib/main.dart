@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'block_observer.dart';
 import 'constant.dart';
 import 'feature/home/presentation/cubit/feature_books_cubit/feature_books_cubit.dart';
 import 'feature/home/presentation/cubit/newest_books_cubit/newest_books_cubit.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
   setUpServiceLocator();
   runApp(const MyApp());
 }
